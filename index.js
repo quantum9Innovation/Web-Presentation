@@ -1,7 +1,12 @@
-var trans = false
-var slides = 1
-var slide = 0
-
+class setup {
+    constructor (trans, slides, slide, op, part) {
+        var op = op
+        var part = part
+        var trans = trans
+        var slides = slides
+        var slide = slide
+    }
+}
 var background = function(co)
 {
 
@@ -13,10 +18,8 @@ var background = function(co)
 
     }
     else {
-
         document.body.style.backgroundColor = "rgb("+co[0]+","+co[1]+","+co[2]+")"
         c.fillStyle = "rgba("+co[0]+","+co[1]+","+co[2]+","+co[3]+")"
-
     }
     c.fillRect(0, 0, w, h)
 
@@ -70,14 +73,15 @@ var textbox = function(x, y, w, s, fs, a, f, co, d, t)
     }
 
 }
-
-var op = 0
-var part = 1
 var fade = function(co)
 {
 
-    if (part){op+=0.01}
-    else {op-=0.01}
+    if (part) {
+        op+=0.01
+    }
+    else {
+        op-=0.01
+    }
     if ( op >= 1 ){
 
         slide++
@@ -92,21 +96,22 @@ var fade = function(co)
     }
     co.push(op)
     background(co)
-
 }
-
-var zero = function()
-{
+var zero = function() {
 
     if ( trans )
     {fade([255, 255, 255])
  
-}
 
+
+    }
+}
 var refresh = function()
 {
 
-    if ( slide == 0 ){zero()}
+    if ( slide == 0 ){
+        zero()
+    }
     window.requestAnimationFrame(refresh)
 
 }
@@ -137,7 +142,7 @@ var go = function(e)
     }
 
 }
-
-
-refresh()
-document.addEventListener("keyup", go)
+var startup = function() {
+    document.addEventListener("keyup", go)
+    refresh()
+}

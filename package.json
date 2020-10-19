@@ -1,0 +1,25 @@
+{
+  "name": "web-presentation",
+  "version": "1.0.0",
+  "description": "A Web Presentation Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantum9innovation/Web-Presentation"
+  },
+  "keywords": [
+    "Presentation",
+    "Slideshow",
+    "Power-Point",
+    "Present"
+  ],
+  "author": "quantum9innovation, qlabs",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/quantum9innovation/Web-Presentation/issues"
+  },
+  "homepage": "quantalabs.github.io/Web-Presentation"
+}
